@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonials | Abby’s Catering</title>
+</head>
+<body bgcolor="#f5f5f5" text="black">
+
+  <center>
+    <h1 style="font-family: Chonburi; color: tomato;">Abby’s Catering Testimonials</h1>
+    <h3 style="font-family: Georgia; color: orange;">Serving West Lafayette, IN</h3>
+  </center>
+
+  <hr>
+
+  <p style="font-family: Georgia; font-size: 16px;">
+    Welcome to <b><i>Abby’s Catering</i></b>! We specialize in delicious comfort food including 
+    <u>chicken tenders</u>, <b>mac and cheese</b>, fries, salads, soft drinks, and desserts. 
+    Our founder, <font color="tomato"><b>Abby Ledger</b></font>, believes every meal should bring people together.
+  </p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Fried_chicken_tenders.jpg" 
+       alt="Chicken Tenders" width="300" height="200">
+
+  <h2 style="font-family: Chonburi; color: tomato;">What Our Customers Say</h2>
+
+  <p style="font-family: Georgia; font-size: 14px;">
+    <b><font color="orange">Emily R.:</font></b> 
+    <i>The mac and cheese was so creamy!</i> The food arrived <u>hot and fresh</u>. Highly recommend!
+  </p>
+
+  <p style="font-family: Georgia; font-size: 14px;">
+    <b><font color="orange">Jacob S.:</font></b> 
+    Abby’s Catering made our <b>corporate lunch</b> so easy. The fries and salads were amazing!
+  </p>
+
+  <p style="font-family: Georgia; font-size: 14px;">
+    <b><font color="orange">Olivia M.:</font></b> 
+    <i>The dessert plate</i> was the perfect finishing touch. 
+    <u>Great service</u> and even better food!
+  </p>
+
+  <h3 style="font-family: Chonburi;">Our Popular Dishes</h3>
+  <ul style="font-family: Georgia; font-size: 14px;">
+    <li>Chicken Tenders</li>
+    <li>Mac and Cheese</li>
+    <li>Fries</li>
+    <li>Salads</li>
+    <li>Dessert Plate</li>
+  </ul>
+
+  <h3 style="font-family: Chonburi;">Why Choose Us</h3>
+  <ol style="font-family: Georgia; font-size: 14px;">
+    <li>Fresh and locally sourced ingredients</li>
+    <li>On-time delivery guaranteed</li>
+    <li>Friendly and professional service</li>
+  </ol>
+
+  <p>
+    <a href="menu.pdf" download style="font-size:14px;">📄 Download Our Menu (PDF)</a>
+  </p>
+
+  <p>
+    <a href="mailto:abbyledger@abbyscatering.com" style="font-size:14px;">📧 Contact Me</a>
+  </p>
+
+  <p>
+    Visit our partner site: 
+    <a href="https://www.catering.com" target="_blank">Catering.com</a>
+  </p>
+
+  <hr>
+
+  <p style="font-size:12px; font-family:Georgia;">
+    <script>
+      document.write("Date Last Modified: " + document.lastModified);
+    </script>
+  </p>
+
+</body>
+</html>

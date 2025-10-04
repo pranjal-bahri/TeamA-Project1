@@ -1,263 +1,107 @@
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { MenuCard } from "@/components/MenuCard";
-import { Download, Mail, ExternalLink } from "lucide-react";
-import heroImage from "@/assets/hero-catering.jpg";
-import chickenTenders from "@/assets/chicken-tenders.jpg";
-import macCheese from "@/assets/mac-cheese.jpg";
-import fries from "@/assets/fries.jpg";
-import salad from "@/assets/salad.jpg";
-import drinks from "@/assets/drinks.jpg";
-import desserts from "@/assets/desserts.jpg";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savory Delights Catering</title>
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            margin: 20px;
+            background-color: Tomato;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Chonburi', serif;
+            color: White;
+            text-align: center;
+        }
+        h2 {
+            color: black;
+        }
+        .highlight {
+            font-style: italic;
+            font-size: 18px;
+        }
+        .important {
+            font-weight: bold;
+            text-decoration: underline;
+            color: black;
+        }
+        .menu-item {
+            margin: 15px 0;
+        }
+        img {
+            max-width: 200px;
+            border-radius: 8px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
 
-const Index = () => {
-  const [lastModified, setLastModified] = useState("");
+    <h1>Savory Delights Catering</h1>
+    <p class="highlight">Welcome to <span class="important">Savory Delights</span>, where great taste meets <u>exceptional service</u>!</p>
+    <p style="color:black; font-size:16px;">We specialize in comfort food classics and refreshing drinks for every occasion.</p>
 
-  useEffect(() => {
-    const date = new Date();
-    setLastModified(date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }));
-  }, []);
-
-  const menuItems = [
-    {
-      title: "Chicken Tenders",
-      price: "$12.99",
-      description: "Crispy, golden chicken tenders made with premium cuts, served with your choice of dipping sauce",
-      image: chickenTenders,
-      alt: "Delicious golden chicken tenders"
-    },
-    {
-      title: "Mac and Cheese",
-      price: "$8.99",
-      description: "Creamy homemade mac and cheese with a premium blend of aged cheddar and parmesan",
-      image: macCheese,
-      alt: "Creamy mac and cheese"
-    },
-    {
-      title: "French Fries",
-      price: "$4.99",
-      description: "Fresh-cut golden fries, perfectly seasoned and crispy on the outside, fluffy inside",
-      image: fries,
-      alt: "Crispy golden french fries"
-    },
-    {
-      title: "Garden Salad",
-      price: "$6.99",
-      description: "Fresh mixed greens with seasonal vegetables, cherry tomatoes, and cucumbers",
-      image: salad,
-      alt: "Fresh garden salad"
-    },
-    {
-      title: "Coca-Cola Products",
-      price: "$2.99",
-      description: "Ice-cold Coca-Cola products including Coke, Diet Coke, Sprite, and more",
-      image: drinks,
-      alt: "Refreshing Coca-Cola products"
-    },
-    {
-      title: "Dessert Platter",
-      price: "$15.99",
-      description: "Assorted selection of cakes, pastries, cookies, and sweet treats perfect for any occasion",
-      image: desserts,
-      alt: "Elegant dessert platter"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <header 
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 drop-shadow-lg">
-            <span className="italic">Savory Delights</span> Catering
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-sans mb-8">
-            <strong>Premium Catering</strong> for <u>Every Occasion</u>
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-              asChild
-            >
-              <a href="mailto:catering@savorydelights.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Contact Us
-              </a>
-            </Button>
-            <Button 
-              size="lg"
-              variant="secondary"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
-              asChild
-            >
-              <a href="/menu.pdf" download>
-                <Download className="mr-2 h-5 w-5" />
-                Download Menu
-              </a>
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-16">
-        {/* About Section */}
-        <section className="mb-16 text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-serif font-bold text-foreground mb-6">
-            Welcome to Savory Delights
-          </h2>
-          <p className="text-lg text-foreground leading-relaxed mb-4">
-            We are a <strong className="text-primary">premier catering service</strong> specializing in 
-            <em className="text-accent"> delicious, high-quality food</em> for events of all sizes. 
-            From <span className="text-secondary font-semibold">corporate gatherings</span> to 
-            <span className="text-accent font-semibold"> family celebrations</span>, we bring the flavor!
-          </p>
-          <p className="text-base text-muted-foreground">
-            <u>Visit our kitchen</u> or let us bring the party to you with our full-service catering options.
-          </p>
-        </section>
-
-        {/* Why Choose Us Section with Lists */}
-        <section className="mb-16 bg-card rounded-lg p-8 shadow-md max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-8 text-center">
-            Why Choose Savory Delights?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-primary mb-4 font-serif">
-                Our Service Process
-              </h3>
-              <ol className="space-y-3 text-foreground list-decimal list-inside">
-                <li className="text-base leading-relaxed">
-                  <strong>Contact us</strong> with your event details and requirements
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Customize</strong> your menu from our extensive selection
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Confirm</strong> your order and delivery details
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Enjoy</strong> delicious food prepared fresh for your event
-                </li>
-              </ol>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-secondary mb-4 font-serif">
-                Our Commitments
-              </h3>
-              <ul className="space-y-3 text-foreground list-disc list-inside">
-                <li className="text-base leading-relaxed">
-                  <em>Fresh ingredients</em> sourced daily from local suppliers
-                </li>
-                <li className="text-base leading-relaxed">
-                  <em>Professional service</em> with attention to every detail
-                </li>
-                <li className="text-base leading-relaxed">
-                  <em>Flexible options</em> for dietary restrictions and preferences
-                </li>
-                <li className="text-base leading-relaxed">
-                  <em>Competitive pricing</em> without compromising on quality
-                </li>
-                <li className="text-base leading-relaxed">
-                  <em>On-time delivery</em> guaranteed for all events
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Menu Section */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-serif font-bold text-center text-foreground mb-4">
-            Our Popular Menu Items
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            <span className="italic text-accent">Handcrafted with love</span>, served with <span className="font-bold text-primary">excellence</span>
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {menuItems.map((item, index) => (
-              <MenuCard key={index} {...item} />
-            ))}
-          </div>
-        </section>
-
-        {/* Resources Section */}
-        <section className="mb-16 text-center bg-muted/30 rounded-lg p-8">
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-6">
-            Helpful Resources
-          </h2>
-          <p className="text-foreground mb-6 text-lg">
-            Looking for <u>catering tips</u> and <span className="text-primary font-semibold">event planning advice</span>?
-          </p>
-          <Button 
-            variant="outline"
-            size="lg"
-            className="font-semibold border-2"
-            asChild
-          >
-            <a 
-              href="https://www.foodnetwork.com/how-to/packages/food-network-essentials/party-planning-and-menus" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <ExternalLink className="mr-2 h-5 w-5" />
-              Visit Food Network's Party Planning Guide
-            </a>
-          </Button>
-        </section>
-
-        {/* Contact Section */}
-        <section className="text-center bg-gradient-to-r from-primary to-accent text-white rounded-lg p-12">
-          <h2 className="text-4xl font-serif font-bold mb-4">
-            Ready to Make Your Event <span className="italic">Unforgettable</span>?
-          </h2>
-          <p className="text-xl mb-8">
-            Contact our catering specialist today for a <strong>free consultation</strong>
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-bold text-lg"
-              asChild
-            >
-              <a href="mailto:catering@savorydelights.com">
-                <Mail className="mr-2 h-6 w-6" />
-                Email: catering@savorydelights.com
-              </a>
-            </Button>
-          </div>
-          <p className="mt-6 text-lg">
-            <strong>Phone:</strong> (555) 123-4567 | <strong>Serving:</strong> <u>Greater Metropolitan Area</u>
-          </p>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground mb-2">
-            © 2024 Savory Delights Catering. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground italic">
-            <strong>Last Modified:</strong> {lastModified}
-          </p>
-        </div>
-      </footer>
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+        <strong>Chicken Tenders</strong><br>
+        <img src="ChickenTenders.jpg" alt="Chicken Tenders">
     </div>
-  );
-};
+    <div class="menu-item">
+        <strong>Mac and Cheese</strong><br>
+        <img src="MacCheese.jpg" alt="Mac and Cheese">
+    </div>
+    <div class="menu-item">
+        <strong>Fries</strong><br>
+        <img src="fries.jpg" alt="Fries">
+    </div>
+    <div class="menu-item">
+        <strong>Coke Products</strong><br>
+        <img src="CocaCola.jpg" alt="Coke">
+    </div>
+    <div class="menu-item">
+        <strong>Dessert Plate</strong><br>
+        <img src="DessertPlate.jpg" alt="Dessert Plate">
+    </div>
 
-export default Index;
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>Fresh ingredients</li>
+        <li>Affordable pricing</li>
+        <li>Customized menus</li>
+        <li>Professional staff</li>
+        <li>On-time delivery</li>
+    </ul>
+
+    <h2>How to Order</h2>
+    <ol>
+        <li>Browse our menu</li>
+        <li>Select your items</li>
+        <li>Place your order via phone or email</li>
+        <li>Enjoy your delicious meal!</li>
+    </ol>
+
+    <h2>Useful Links</h2>
+    <p>
+        <a href="https://www.foodnetwork.com" target="_blank">Visit Food Network for recipes</a><br>
+        <a href="mailto:catering@savorydelights.com">Contact Me</a><br>
+        <a href="menu.pdf" download>Download Our Menu (PDF)</a>
+    </p>
+
+    <div class="footer">
+        <script>
+            document.write("Last Modified: " + document.lastModified);
+        </script>
+    </div>
+
+</body>
+</html>
